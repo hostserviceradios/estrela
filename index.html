@@ -1,0 +1,376 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Economica&family=Roboto&family=Teko:wght@300&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Economica&family=Roboto&family=Teko:wght@300&family=Tenor+Sans&display=swap');
+body {
+	background: #000
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+:root {
+	--font-1: Roboto, monospace;
+	--font-2: Teko, sans-serif;
+	--font-3: Cookie, cursive;
+	--colorprinc: #00CED1
+}
+
+:before,
+:after {
+	content: '';
+	position: absolute
+}
+
+a {
+	text-align: center;
+	text-transform: uppercase;
+	display: inline-block;
+	text-decoration: none
+}
+
+span {
+	display: inline-block
+}
+
+#main,
+.app,
+.container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	font-family: var(--font-1);
+	font-size: 1em;
+	color: var(--colorprinc);
+	overflow: hidden
+}
+
+[class*='aside'] {
+	width: 220px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: #00FFFF;
+	text-align: center
+}
+
+.aside-left {
+	left: 0;
+	border-right: solid 1px var(--colorprinc)
+}
+
+.aside-right {
+	right: 0;
+	border-left: solid 1px var(--colorprinc)
+}
+
+.user {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-top: 70px
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 0 0 5px var(--colorprinc);
+	margin-left: calc(50% - 55px)
+}
+
+.avatar img {
+	width: 100%
+}
+
+._id {
+	width: 70px;
+	height: 20px;
+	border-radius: 2px;
+	background: var(--colorprinc);
+	color: #000;
+	text-align: center;
+	font-size: .6em;
+	line-height: 22px;
+	box-shadow: 0 0 0 1px #000;
+	position: absolute;
+	top: 0;
+	left: 130px
+}
+
+.user h2 {
+	width: 160px;
+	height: 30px;
+	border-radius: 2px;
+	background: var(--colorprinc);
+	margin-top: 15px;
+	margin-left: calc(50% - 80px);
+	color: #000;
+	font-size: .65em;
+	line-height: 32px
+}
+
+[class*='col-'] {
+	width: 200px;
+	height: auto;
+	position: relative;
+	margin-left: 9.5px;
+	min-height: 200px;
+	border-top: solid 1px var(--colorprinc)
+}
+
+[class*='col-']:before,
+[class*='col-']:after {
+	width: 1px;
+	height: 150px;
+	background: var(--colorprinc);
+	top: 0
+}
+
+[class*='col-']:before {
+	left: 0
+}
+
+[class*='col-']:after {
+	right: 0
+}
+
+.col-friends {
+	margin-top: 60px
+}
+
+.sub {
+	width: 70px;
+	height: 24px;
+	background: var(--colorprinc);
+	color: #000;
+	border-radius: 2px;
+	position: absolute;
+	text-align: center;
+	font-size: .7em;
+	line-height: 24px;
+	top: -12px;
+	left: 10px
+}
+
+ul {
+	width: 100%;
+	height: auto;
+	margin-top: 25px;
+	padding: 5px;
+	list-style: none
+}
+
+ul a {
+	width: 100%;
+	height: 26px;
+	border-radius: 2px;
+	line-height: 26px;
+	background: var(--colorprinc);
+	color: #000;
+	font-size: .65em;
+	margin-bottom: 10px;
+	transition: all .2s ease-out
+}
+
+ul a:hover {
+	color: var(--colorprinc);
+	background: #000
+}
+
+.col-msg {
+	margin-top: 100px
+}
+
+.desc {
+	font-size: 11px;
+	width: 100%;
+	padding: 12px;
+	margin-top: 25px
+}
+
+.video {
+	width: 200px;
+	height: 113px;
+	background: #000;
+	box-shadow: 0 5px var(--colorprinc);
+	margin: 50px 9.5px
+}
+
+.section {
+	width: calc(100% - 440px);
+	height: 100vh;
+	position: absolute;
+	left: 220px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url(https://i.postimg.cc/D0jBjmDz/efecto-8.gif)top left repeat
+}
+
+.title {
+	width: 100%;
+	line-height: 120px;
+	text-align: center;
+	font-family: var(--font-3);
+	font-size: 3em;
+	font-weight: lighter
+}
+
+.box {
+	width: 600px;
+	height: 400px;
+	margin-top: 30px;
+	border-radius: 2px;
+	background: #000;
+	box-shadow: 0 0 0 1px var(--colorprinc);
+	overflow: hidden
+}
+
+.box img {
+	width: 100%;
+	height: 100%
+}
+
+.open {
+	width: 120px;
+	padding: 5px 15px;
+	background: var(--colorprinc);
+	color: #000;
+	line-height: 26px;
+	border-radius: 2px;
+	font-size: .7em;
+	margin-top: 40px
+}
+
+.open:hover {
+	color: #FFF
+}
+
+.modal {
+	position: absolute;
+	width: calc(100% - 440px);
+	height: 520px;
+	bottom: 0;
+	left: 220px;
+	background: rgba(0, 0, 0, .7);
+	transform: translateY(100vh);
+	transition: all .5s ease-out;
+	overflow-y: auto
+}
+
+.gallery {
+	width: auto;
+	height: 450px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center
+}
+
+.gallery img {
+	height: 100%;
+	width: auto;
+	margin: 10px;
+	border: solid 5px var(--colorprinc)
+}
+
+.close {
+	width: 140px;
+	height: 40px;
+	background: url(https://i.postimg.cc/1XwDxmtG/Group-4.png)center center no-repeat, var(--colorprinc);
+	position: fixed;
+	bottom: 0;
+	left: calc(50% - 70px)
+}
+
+#_:target .modal {
+	transform: translateY(0)
+}
+
+::-webkit-scrollbar {
+	height: 5px;
+	background: #00FFFF
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--colorprinc);
+</style>
+<div id="main">
+    <div id="_">
+    <div class="app">
+    <div class="container">
+    <div class="aside-left">
+    <div class="user">
+    <div class="avatar">
+    <img src="https://img.xatblog.net/image/ZWL06SDKhAO.jpg" />
+    </div>
+    <span class="_id">1433768717</span>
+    <h2>Estrela</h2>
+    </div>
+    <div class="col-friends">
+    <span class="sub">Meus Amigos</span>
+    <ul>
+    <li><a href="http://xat.me/strager42">Stranger</a></li>
+    <li><a href="http://xat.me/katialovealvin">KatialoveAlvin</a></li>
+    <li><a href="http://xat.me/">friend 03</a></li>
+    <li><a href="http://xat.me/">friend 04</a></li>
+    <li><a href="http://xat.me/">friend 05</a></li>
+    <li><a href="http://xat.me/">friend 06</a></li>
+    </ul>
+    <a class="open" href="#_">GALERIA</a>
+    </div>
+    </div>
+    <div class="section">
+    <h1 class="title">Bem Vindos ao meu xatspace</h1>
+    <div class="box">
+    <img src="https://img.xatblog.net/image/BkLj1RdYIc2.gif" />
+    </div>
+    </div>
+    <div class="aside-right">
+    <div class="col-msg">
+    <span class="sub">Sobre mim</span>
+    <p class="desc">
+ Pare ..E me escute ..
+ Ao menos uma vez Ouça
+ um dezabafo meu ao menos por um minuto…..
+
+Pare.. E se deixar envolver numa parte de nós…..
+Que constitui o meu mundo…..
+Aos menos aceite minha maneira de ser ..
+Ao menos tente me entender …
+
+Pare … Deixe o orgulho esquecido…
+E as mágoas em algum canto do seu lado ferido …
+Deixe você e seja eu ao menos por um segundo ….
+
+Pare… Cale..E ouça ….
+Ouça meu silêncio , perceba o meu olhar ..
+E o que ele sente de você ,sou diferente…
+
+Eu sou .. apenas uma pessoa que sente na alma ..
+no grito de um coração que não mente…
+Esta sou eu apenas eu ...LOC ESTRELA
+    </p>
+    </div>
+    <div class="video">
+        
+<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jb0K64SGsfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    </div>
+    </div>
+    <div class="modal">
+    <div class="gallery">
+    <img src="https://img.xatblog.net/image/WaCfsXjrCg.jpg" />
+    <img src="https://img.xatblog.net/image/l5Yyrkf2POB.jpg" />
+    </div>
+    <a class="close" href="#"></a>
+    </div>
+    </div>
+    </div>
+   </div>
